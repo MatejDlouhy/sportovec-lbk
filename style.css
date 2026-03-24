@@ -1,0 +1,297 @@
+.name {
+    left: 50%;
+    top: 50%;
+    margin-top: -3.3rem;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    max-width: 240px;
+  }
+  
+  .name label.text {
+    font-size: 0.75rem;
+    color: #818CF8;
+    font-weight: 700;
+    position: relative;
+    top: 0.7rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: #e8e8e8;
+    width: fit-content;
+  }
+  
+  .name input[type=text].input {
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    border: 2px #818CF8 solid;
+    border-radius: 5px;
+    background: #e9e9e9;
+    text-align: center;
+  }
+  
+  .name input[type=text].input:focus {
+    outline: none;
+
+  }
+
+.organization {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    max-width: 240px;;
+  }
+  
+  .organization label.text {
+    font-size: 0.75rem;
+    color: #818CF8;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: #e8e8e8;
+    width: fit-content;
+  }
+  
+  .organization input[type=text].input {
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    border: 2px #818CF8 solid;
+    border-radius: 5px;
+    background: #e9e9e9;
+    text-align: center;
+  }
+  
+  .organization input[type=text].input:focus {
+    outline: none;
+  }
+
+
+
+.enter {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: fit-content;
+    max-width: 350px;
+    margin-top: 3.5rem;
+
+   }
+  .enter button {
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    transition-duration: 1s;
+    transition-property: border-top, 
+       border-left, 
+       border-bottom,
+       border-right,
+       box-shadow;
+  }
+
+  .enter button:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 10px 20px;
+  }
+
+
+
+
+.select-sportovec {
+    border-radius: .5rem;
+    border: 2px solid blueviolet;
+    background: #fff;
+    color: blueviolet;
+    font-weight: 700;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    margin-bottom: 0.7rem;
+}
+
+.selects-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .selects-wrapper > div {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.select-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .select-row label {
+    font-size: 1rem;
+    color: blueviolet;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    background: none;
+    padding: 0;
+    position: static;
+    width: 100%;
+    text-align: left;
+  }
+
+  .select-row select {
+    width: 100%;
+    min-width: 200px;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+.select-sportovec:focus {
+    border-color: rgb(238, 103, 238);
+    box-shadow: 0 0 10px rgba(240, 46, 170, 0.2);
+}
+
+
+h2 {
+    text-align: center;
+    color: blueviolet;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    font-weight: 700;
+    border-bottom: 2px solid blueviolet;
+    border-radius: .5rem .5rem 0 0;
+    background: #fff;
+    padding: 0.7rem 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nadpis {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;} 
+
+  .nadpis label.info {
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: blueviolet;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 auto 1rem auto;
+    letter-spacing: 0.5px;
+  }
+
+.submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    position: static; }
+    
+  .submit button {
+    padding: 0.7rem 1.2rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    transition-duration: 1s;
+    transition-property: border-top, 
+       border-left, 
+       border-bottom,
+       border-right,
+       box-shadow;
+}
+    .submit button:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 10px 20px;
+}
+  .submit button:focus {
+    outline: none;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 10px 20px;
+}
+
+.summary-row {
+    color: blueviolet;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    position: static; }
+
+  .summary-list {
+    text-align: left;
+    margin: 0.5rem auto 1.5rem auto;
+    display: inline-block;
+    color: blueviolet;
+    font-weight: 700;
+    font-size: 1rem;
+    padding-left: 1.2rem;
+  }
+.submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    position: static; }
+    
+.submit button {
+    padding: 0.7rem 1.2rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    transition-duration: 1s;
+    transition-property: border-top, 
+       border-left, 
+       border-bottom,
+       border-right,
+       box-shadow;
+}
+.submit button:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 10px 20px;
+}
+.submit button:focus {
+    outline: none;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 10px 20px;
+}
