@@ -1,13 +1,42 @@
-.name {
-    left: 50%;
-    top: 50%;
-    margin-top: -3.3rem;
-    transform: translateX(-50%) translateY(-50%);
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    width: fit-content;
-    position: absolute;
-    max-width: 240px;
+    background: #e8e8e8;
+}
+
+#prihlaseni {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: static;
+    margin: 0;
+    transform: none;
+    max-width: none;
   }
   
   .name label.text {
@@ -22,13 +51,15 @@
     width: fit-content;
   }
   
-  .name input[type=text].input {
+.name input[type=text].input {
     padding: 11px 10px;
     font-size: 0.75rem;
     border: 2px #818CF8 solid;
     border-radius: 5px;
     background: #e9e9e9;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .name input[type=text].input:focus {
@@ -37,14 +68,13 @@
   }
 
 .organization {
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
     display: flex;
     flex-direction: column;
-    width: fit-content;
-    position: absolute;
-    max-width: 240px;;
+    width: 100%;
+    position: static;
+    margin: 0;
+    transform: none;
+    max-width: none;
   }
   
   .organization label.text {
@@ -66,6 +96,8 @@
     border-radius: 5px;
     background: #e9e9e9;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .organization input[type=text].input:focus {
@@ -79,14 +111,10 @@
     justify-content: center; 
     align-items: center;
     flex-direction: column;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: fit-content;
-    max-width: 350px;
-    margin-top: 3.5rem;
-
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin: 0;
    }
   .enter button {
     padding: 0.8rem 2rem;
@@ -184,13 +212,17 @@ h2 {
     text-align: center;
     color: blueviolet;
     margin-bottom: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 0;
     font-weight: 700;
     border-bottom: 2px solid blueviolet;
-    border-radius: .5rem .5rem 0 0;
+    border-radius: 0;
     background: #fff;
-    padding: 0.7rem 1.2rem;
+    padding: 1rem 1.2rem;
     letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nadpis {
@@ -245,22 +277,193 @@ h2 {
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 10px 20px;
 }
 
-.summary-row {
-    color: blueviolet;
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    position: static; }
+/* CSS pro formuláře na hlasovacích stránkách */
+form:not(#loginForm) {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 
-  .summary-list {
-    text-align: left;
-    margin: 0.5rem auto 1.5rem auto;
-    display: inline-block;
-    color: blueviolet;
-    font-weight: 700;
-    font-size: 1rem;
-    padding-left: 1.2rem;
-  }
+/* ===== RESPONZIVNÍ DESIGN PRO MOBILNÍ ZAŘÍZENÍ ===== */
+
+/* Tablety a menší obrazovky (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    #loginForm {
+        gap: 1rem;
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+    
+    .name label.text,
+    .organization label.text {
+        font-size: 0.7rem;
+    }
+    
+    .name input[type=text].input,
+    .organization input[type=text].input {
+        font-size: 0.85rem;
+        padding: 10px 8px;
+    }
+    
+    .enter button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+        padding: 0.8rem 1rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .nadpis label.info {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .select-row {
+        max-width: 100%;
+    }
+    
+    .select-row label {
+        font-size: 0.95rem;
+    }
+    
+    .select-sportovec {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+        max-width: 100%;
+    }
+    
+    .selects-wrapper > div {
+        max-width: 100%;
+    }
+    
+    .summary-list {
+        font-size: 0.95rem;
+        padding-left: 1rem;
+    }
+}
+
+/* Mobily - malé (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+        min-height: auto;
+    }
+    
+    #prihlaseni {
+        padding: 0.5rem;
+    }
+    
+    #loginForm {
+        gap: 0.8rem;
+        padding: 1rem;
+        max-width: 100%;
+        border-radius: 0.5rem;
+    }
+    
+    .name,
+    .organization {
+        width: 100%;
+    }
+    
+    .name label.text,
+    .organization label.text {
+        font-size: 0.65rem;
+    }
+    
+    .name input[type=text].input,
+    .organization input[type=text].input {
+        font-size: 16px;
+        padding: 10px 8px;
+        width: 100%;
+    }
+    
+    .enter {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .enter button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    h2 {
+        font-size: 1rem;
+        padding: 0.7rem 0.8rem;
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .nadpis {
+        margin-bottom: 0.8rem;
+    }
+    
+    .nadpis label.info {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .select-row {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .select-row label {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .select-sportovec {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.8rem;
+        margin-bottom: 0.6rem;
+        width: 100%;
+    }
+    
+    .selects-wrapper {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .selects-wrapper > div {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .submit {
+        margin-top: 1.5rem;
+    }
+    
+    .submit button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .summary-row {
+        margin-top: 1.5rem;
+    }
+    
+    .summary-list {
+        font-size: 0.9rem;
+        padding-left: 1rem;
+        margin: 0.5rem auto 1rem auto;
+    }
+}
 .submit {
     display: flex;
     justify-content: center;
